@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+   COLLABORATORS:
+   
+  -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ready, Set, Translate !</title>
+    <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="translate_game.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="dicts.json"></script>
+    <script type="text/javascript" src="translate_game.js"></script>
+
+  </head>
+  <body>
+    <!-- Your HTML here -->
+    <h1>Translate from <span>Spanish</span> to <span>English</span></h1>
+
+    <div id="translate-game"> 
+      
+      <div class="row row-first" id="first">
+
+        <div class="column column-1">
+          <h2>Spanish</h2>
+          <div id="translate-word"></div>
+        </div>
+
+        <div class="column column-2">
+          <h2>English</h2>
+          <input type="text" name="Unesite riječ" id="translate-answer">
+        </div>
+
+        <div class="column column-3">
+          <h2>Answer</h2>
+          <button id="submit-answer">See Answer</button>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

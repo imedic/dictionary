@@ -1,0 +1,87 @@
+html {
+    background-color: #eee;
+}
+
+/* Your CSS here */
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #707070; 
+}
+
+h1 {
+    margin: 15px 20px 50px 20px;
+    font-size: 2.25em;
+}
+
+h1 span {
+    color: black;
+}
+
+#translate-game {
+    margin-left: 20px;
+}
+
+.row {
+    display: block;
+    height: auto;
+    width: 600px;
+    margin: 0 0 10px 0;
+    overflow: auto;
+}
+
+.row-first {
+    margin-bottom: 25px;
+}
+
+.row div {
+    font-size: 1.375rem;
+}
+
+.column {
+    position: relative;
+    box-sizing: border-box;
+    width: 33%;
+    padding-right: 10px;
+    float: left;
+}
+
+.column {
+    margin-bottom: 5px;
+}
+
+.column h2 {
+    font-size: 1.5rem;
+}
+
+
+#translate-word {
+    color: black;
+    font-weight: bold;
+}
+
+#translate-answer {
+    width: 85%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#submit-answer {
+    width: 50%;
+}
+
+.correct {
+    color: blue;
+}
+
+.correct img {
+    width: 0.5em;
+}
+
+.incorrect {
+    color: red;
+}
+
+.column-2 .incorrect {
+    text-decoration: line-through;
+}
