@@ -4,16 +4,20 @@ html {
 
 /* Your CSS here */
 
+/*ako nema trebuschet ms uzmi obični sans-serif font*/
 body {
     font-family: 'Trebuchet MS', sans-serif;
     color: #707070; 
 }
 
+/*1em = 16px od fonta koji se koristi ili u ovisnoti o root veličini fonta
+margin: gore desno dolje lijevo*/
 h1 {
     margin: 15px 20px 50px 20px;
     font-size: 2.25em;
 }
 
+/* uzmi sve spanove koje se nalaze unutar h1 i stavi ovaj stil*/
 h1 span {
     color: black;
 }
@@ -23,7 +27,6 @@ h1 span {
 }
 
 .row {
-    display: block;
     height: auto;
     width: 600px;
     margin: 0 0 10px 0;
@@ -38,8 +41,8 @@ h1 span {
     font-size: 1.375rem;
 }
 
+/*box-sizing:border-box da uračuna padding u širinu*/
 .column {
-    position: relative;
     box-sizing: border-box;
     width: 33%;
     padding-right: 10px;

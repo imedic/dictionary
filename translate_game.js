@@ -58,47 +58,35 @@ function randomElement(obj) {
     return result;
 }
 
-
-//stvara html na osnovi string-a
-function create(htmlStr) {
-    var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
-    temp.innerHTML = htmlStr;
-    while (temp.firstChild) {
-        frag.appendChild(temp.firstChild);
-    }
-    return frag;
-}
-
-
-//uzima unešeni tekst u formi, točnu prevedenu riječ (na engleskom) i riječ na španjolskom
-//stvara novi red, dodaje ga nakon prvog reda te na taj novi red dodaje potreban sadržaj
 function buildRow(input, correctValue, word) {
     var isCorrect = input.value === correctValue ? 'correct' : 'incorrect';
     console.log(isCorrect);
-    
+
+    var container = document.getElementById("past-results");
     var row = document.createElement('div');
-    var container = document.getElementById("translate-game");
+    var column1 = document.createElement('div');
+    var column2 = document.createElement('div');
+    var column3 = document.createElement('div');
+
     row.className = 'row';
-    container.insertBefore(row, container.childNodes[2]);
+    container.insertBefore(row, container.childNodes[0]);
 
-    var col1 = '<div class="column column-1"><div class="' + isCorrect + '">' + word +  '</div></div>';
-    col1 = create(col1);
-    row.appendChild(col1);
+    column1.className = 'column column-1';
+    column1.innerHTML = '<div class="' + isCorrect + '">' + word +  '</div>';
+    row.appendChild(column1);
 
-    var col2 = '<div class="column column-2"><div class="' + isCorrect + '">' + input.value +  '</div></div>';
-    col2 = create(col2);
-    row.appendChild(col2);
+    column2.className = 'column column-2';
+    column2.innerHTML = '<div class="' + isCorrect + '">' + input.value +  '</div>';
+    row.appendChild(column2);
 
-    var col3;
+    column3.className = 'column column-3';
     if(isCorrect === 'correct') {
-        col3 = '<div class="column column-3"><div class="' + isCorrect + '"><img src="img/check.svg" alt="Točno"></div></div>';
+        column3.innerHTML = '<div class="' + isCorrect + '"><img src="img/check.svg" alt="Točno"></div>';
     }
     else {
-        col3 = '<div class="column column-3"><div class="' + isCorrect + '">' + correctValue + '</div></div>';
+        column3.innerHTML = '<div class="' + isCorrect + '">' + correctValue + '</div>';
     }
-    col3 = create(col3);
-    row.appendChild(col3);
+    row.appendChild(column3);
 }
 
 
