@@ -26,8 +26,9 @@ h1 span {
     margin-left: 20px;
 }
 
+/*postavljamo proizvoljnu širinu, margine nek budu svagdje nula osim između redova (10px),
+overflow: auto fix je zbog float elemenata - ovo je u biti hack*/
 .row {
-    height: auto;
     width: 600px;
     margin: 0 0 10px 0;
     overflow: auto;
